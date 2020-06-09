@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import pygraphviz
+import wyvern
 import random
 import pydot
 import sys
@@ -26,15 +27,16 @@ def parse_restricts(restrict_string):
     matches = re.findall(restrict_reg, restrict_string)
     return matches
 
-def main():
+def main(argv):
     luck = 10 # [0,100]% chance of anchoring a node
 
-    if len(sys.argv) != 3:
+    if len(argv) != 3:
         print("Usage:", sys.argv[0], "csvfile outputname")
         exit()
 
     courses = {}
-    with open(sys.argv[1]) as csv_file:
+    svg_path = argv[1]
+    with open(svg_path) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = -1
 
@@ -56,11 +58,11 @@ def main():
                 G.add_edge(restrict, value.name, color='red', constraint=(random.randint(0, 100) > luck))
             print(f'{key}:{prereqs}:{restricts}')
 
-    G.write(f'{sys.argv[2]}.gv')
+    G.write(f'{argv[2]}.gv')
 
-    graphs = pydot.graph_from_dot_file(f'{sys.argv[2]}.gv')
-    graphs[0].write_svg(f'{sys.argv[2]}.svg')
-    graphs[0].write_png(f'{sys.argv[2]}.png')
+    graphs = pydot.graph_from_dot_file(f'{argv[2]}.gv')
+    graphs[0].write_svg(f'{argv[2]}.svg')
+    graphs[0].write_png(f'{argv[2]}.png')
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main(sys.argv))
