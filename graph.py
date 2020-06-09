@@ -7,6 +7,9 @@ import sys
 import csv
 import re
 
+prereq_reg = re.compile(r'[A-Z]{2,4}\*[0-9]{4}')
+restrict_reg = re.compile(r'[A-Z]{2,4}\*[0-9]{4}')
+
 class Course:
     def __init__(self, name, prereqs, restricts):
         self.name = name
@@ -25,8 +28,6 @@ def parse_restricts(restrict_string):
 
 def main():
     luck = 10 # [0,100]% chance of anchoring a node
-    prereq_reg = re.compile(r'[A-Z]{2,4}\*[0-9]{4}')
-    restrict_reg = re.compile(r'[A-Z]{2,4}\*[0-9]{4}')
 
     if len(sys.argv) != 3:
         print("Usage:", sys.argv[0], "csvfile outputname")
