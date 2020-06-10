@@ -33,4 +33,6 @@ make run
 
 Though I recommend running Wyvern first, filtering out what you don't need, and then using that. If you load all ~1800 courses of UofG, you'll get unreadable garbage.
 
+Work in progress: the prerequisite and restriction parsing is somewhat inaccurate as I am doing a narive regex matching. If a course has the prerequisite string `(CIS\*3750 or CIS\*3760), (CIS\*2460 or STAT\*2040)`, my regex match will return all four courses as prerequisites, which is terribly inaccurate. For most courses it should be fine, but I am definitely going to make a proper parsing algorithm in the future.
+
 There are a lot of things in both Wyvern and GryphGraph that I want to work on. So far the only way to really narrow down a faculty is to manually edit the CSV in Excel. Fortunately with the number of [parameters](https://github.com/jnguyen1098/wyvern) I scraped, it should hopefully be suitable for basic cases.
