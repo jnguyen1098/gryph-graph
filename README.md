@@ -7,13 +7,6 @@ This project is very coupled with Wyvern and will only take in .CSV files create
 Prior to using Gryph Graph, you need to scrape the requisite data using Wyvern. You can just specify an output name (see below) and `wyvern.py` should be able to use the default URL. At the time of writing, this URL works. Manually specifying the URL will only become relevant in the future if the Guelph website changes. If you don't want to make a new scrape, there exists a pre-made `courses.csv` in the `wyvern` submodule.
 
 ```
-python3 wyvern/wyvern.py courses.csv
-```
-
-
-Assuming you executed that last step and the names of the output files you want is `outputname`, you would run it as the following.
-
-```
 python3 graph.py courses.csv output
 ```
 
@@ -25,7 +18,7 @@ python3 graph.py courses.csv output
 
 - A PNG of it (output.png)
 
-You may execute both of the above commands in tandem using the `makefile`:
+There is also a `makefile`:
 
 ```
 make run
