@@ -4,7 +4,7 @@ This is my attempt to make use of my [Wyvern](https://github.com/jnguyen1098/wyv
 
 This project is very coupled with Wyvern and will only take in .CSV files created using it. I have added it as a submodule.
 
-Prior to using Gryph Graph, you need to scrape the requisite data using Wyvern. You can just specify an output name (see below) and `wyvern.py` should be able to use the default URL. At the time of writing, this URL works. Manually specifying the URL will only become relevant in the future if the Guelph website changes. If you don't want to make a new scrape, there exists a pre-made `courses.csv` in the repo. 
+Prior to using Gryph Graph, you need to scrape the requisite data using Wyvern. You can just specify an output name (see below) and `wyvern.py` should be able to use the default URL. At the time of writing, this URL works. Manually specifying the URL will only become relevant in the future if the Guelph website changes. If you don't want to make a new scrape, there exists a pre-made `courses.csv` in the `wyvern` submodule.
 
 ```
 python3 wyvern/wyvern.py courses.csv
