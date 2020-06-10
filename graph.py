@@ -63,6 +63,7 @@ def main(argv):
     graphs = pydot.graph_from_dot_file(f'{argv[2]}.gv')
     graphs[0].write_svg(f'{argv[2]}.svg')
     graphs[0].write_png(f'{argv[2]}.png')
+    print("Done!")
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv))

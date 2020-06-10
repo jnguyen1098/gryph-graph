@@ -31,4 +31,6 @@ You may execute both of the above commands in tandem using the `makefile`:
 make run
 ```
 
+Though I recommend running Wyvern first, filtering out what you don't need, and then using that. If you load all ~1800 courses of UofG, you'll get unreadable garbage.
+
 There are a lot of things in both Wyvern and GryphGraph that I want to work on. So far the only way to really narrow down a faculty is to manually edit the CSV in Excel. Fortunately with the number of [parameters](https://github.com/jnguyen1098/wyvern) I scraped, it should hopefully be suitable for basic cases.
