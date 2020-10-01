@@ -24,7 +24,7 @@ There is also a `makefile`:
 make run
 ```
 
-Though I recommend running Wyvern first, filtering out what you don't need, and then using that. If you load all ~1800 courses of UofG, you'll get unreadable garbage.
+Though I recommend running Wyvern first, filtering out what you don't need, and then using that. If you load all ~1800 courses of UofG, you'll get unreadable garbage. It will also be hard to tell which analyses are correct or not (see below).
 
 Work in progress: the prerequisite and restriction parsing is somewhat inaccurate as I am doing a narive regex matching. If a course has the prerequisite string `(CIS\*3750 or CIS\*3760), (CIS\*2460 or STAT\*2040)`, my regex match will return all four courses as prerequisites, which is terribly inaccurate. For most courses it should be fine, but I am definitely going to make a proper parsing algorithm in the future.
 
