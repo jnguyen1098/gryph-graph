@@ -29,6 +29,7 @@ def parse_restricts(restrict_string):
 
 def main(argv):
     luck = 10 # [0,100]% chance of anchoring a node
+    #seems like bad luck to me!
 
     if len(argv) != 3:
         print("Usage:", sys.argv[0], "csvfile outputname")
