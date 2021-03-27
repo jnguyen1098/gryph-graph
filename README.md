@@ -18,11 +18,7 @@ python3 graph.py courses.csv output
 
 - A PNG of it (output.png)
 
-There is also a `makefile`:
-
-```
-make run
-```
+You may automate this process using the `run.sh` script.
 
 Though I recommend running Wyvern first, filtering out what you don't need, and then using that. If you load all ~1800 courses of UofG, you'll get unreadable garbage. It will also be hard to tell which analyses are correct or not (see below).
 
